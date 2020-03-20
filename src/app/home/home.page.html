@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar class="air-selangor-toolbar">
+    <div class="ion-text-center ion-padding-top" style="font-weight: bold;">
+      WORK ORDER INFORMATION
+    </div>
+    <ion-segment [(ngModel)]="type">
+      <ion-segment-button value="pending">
+        <ion-label color="light" style="font-weight: bold;">Pending</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="approval">
+        <ion-label color="light" style="font-weight: bold;">Approval</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="type">
+    <div *ngSwitchCase="'pending'">
+      <div>
+        <ion-card *ngFor="let pending of pendings">
+          <ion-card-header>
+            <ion-card-subtitle class="ion-padding-bottom">
+              <div class="ion-float-left">
+                <ion-badge [color]="pending.type == 'CM' ? 'danger' : 'warning'"
+                  >{{ pending.type }}</ion-badge
+                >
+              </div>
+              <div class="ion-float-right">
+                <ion-badge [color]="pending.type == 'CM' ? 'danger' : 'warning'"
+                  >{{ pending.date }}</ion-badge
+                >
+              </div>
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="ion-text-justify">
+              {{ pending.desc }}
+            </div>
+            <div class="ion-text-end ion-padding-top">
+              <ion-button fill="clear" [routerLink]="['/work-order']">
+                <ion-icon slot="icon-only" name="build"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'approval'">
+      <ion-card *ngFor="let approval of approvals">
+        <ion-card-header
+          *ngIf="approval.status == 'approve' || approval.status == 'reject'"
+        >
+          <ion-card-subtitle class="ion-padding-bottom">
+            <div class="ion-float-left">
+              <ion-badge
+                [color]="approval.status == 'approve' ? 'success' : 'danger'"
+                >{{ approval.status }}</ion-badge
+              >
+            </div>
+            <div class="ion-float-right">
+              <ion-badge
+                [color]="approval.status == 'approve' ? 'success' : 'danger'"
+                >{{ approval.approvalDate }}</ion-badge
+              >
+            </div>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content
+          *ngIf="approval.status == 'approve' || approval.status == 'reject'"
+        >
+          <h1 style="color: black; font-weight: bold;">{{ approval.approvalID }}</h1>
+          <div class="ion-text-justify">
+            {{ approval.approvalBy }}
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

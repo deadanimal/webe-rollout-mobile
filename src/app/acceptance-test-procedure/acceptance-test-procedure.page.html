@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar class="air-selangor-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Acceptance Test Procedure</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list class="line-input">
+        <ion-item>
+          <ion-label position="stacked">Test ID</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Test Item Description</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Procedure ID</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Test Procedure Description</ion-label>
+          <ion-textarea rows="3"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list class="line-input">
+        <ion-item>
+          <ion-label position="stacked">Test Case ID</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Test Case Description</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Test Result</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Test Date</ion-label>
+          <ion-datetime></ion-datetime>
+        </ion-item>
+
+        <hr>
+        <h3 style="color: black; font-weight: bold;">Tester</h3>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="8"><ion-input placeholder="Enter name"></ion-input></ion-col>
+            <ion-col size="4" class="ion-padding"><a (click)="presentModal()">Signature</a></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8"><ion-input placeholder="Enter name"></ion-input></ion-col>
+            <ion-col size="4" class="ion-padding"><a (click)="presentModal()">Signature</a></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8"><ion-input placeholder="Enter name"></ion-input></ion-col>
+            <ion-col size="4" class="ion-padding"><a (click)="presentModal()">Signature</a></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="ion-text-center ion-padding">
+    <ion-button>Submit</ion-button>
+  </div>
+</ion-content>

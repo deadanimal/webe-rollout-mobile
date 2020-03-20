@@ -1,0 +1,7 @@
+{
+  "name": "air-selangor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

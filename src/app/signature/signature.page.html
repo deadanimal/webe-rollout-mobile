@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar class="air-selangor-toolbar">
+    <ion-button fill="clear" slot="start" color="light" (click)="closeModal()">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Signature</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-label>Sign Below</ion-label>
+      <signature-pad [options]="signaturePadOptions"></signature-pad>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="ion-text-center ion-padding">
+    <ion-button>Submit</ion-button>
+  </div>
+</ion-content>

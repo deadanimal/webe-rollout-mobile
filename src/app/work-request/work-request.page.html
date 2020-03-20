@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar class="air-selangor-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Work Request</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+    <h4>Create Work Request (WR)</h4>
+  </div>
+
+  <ion-img src="assets/image/no-image.png"></ion-img>
+
+  <ion-list class="ion-padding line-input">
+    <ion-item>
+      <ion-label position="stacked">Nama Aset</ion-label>
+      <ion-select placeholder="Sila Pilih" class="ion-text-wrap">
+        <ion-select-option [value]="assetName" *ngFor="let assetName of assetNames">{{ assetName }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Jenis Permasalahan</ion-label>
+      <ion-select placeholder="Sila Pilih" class="ion-text-wrap">
+        <ion-select-option>Masalah Kebocoran</ion-select-option>
+        <ion-select-option>Masalah Paip Tersumbat</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Huraian</ion-label>
+      <ion-textarea rows="5"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-end">
+          <ion-button>Hantar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-start">
+          <ion-button>Ambil Gambar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

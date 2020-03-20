@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar class="air-selangor-toolbar">
+    <div class="ion-text-center" style="font-weight: bold;">
+      TASK
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button (click)="scanQrCode()">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col size="3"></ion-col>
+      <ion-col size="6">
+        <div>
+          <ion-img src="assets/image/no-image.png"></ion-img>
+        </div>
+      </ion-col>
+      <ion-col size="3"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item>
+    <ion-label position="stacked">BOM / BOQ ID</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        BOM / BOQ Info
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list class="line-input">
+        <ion-item>
+          <ion-label position="stacked">Vendor</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Type of Material</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Grouping</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Material ID</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Material Name</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Material Code</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Unit of Measure</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Price</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Serial No (if required)</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <!-- <ion-col class="ion-text-end">
+        <ion-button>Add more</ion-button>
+      </ion-col> -->
+      <ion-col class="ion-text-center">
+        <ion-button [routerLink]="['/submit']">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

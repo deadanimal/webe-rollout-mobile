@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar class="air-selangor-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Punchlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div class="ion-text-center">
+      <h3 style="color: black; font-weight: bold;">Punchlist for a new building</h3>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <h5 style="color: black; font-weight: bold;">Room</h5>
+            <p>Living Room</p>
+          </ion-col>
+          <ion-col>
+            <h5 style="color: black; font-weight: bold;">Item</h5>
+            <ion-list>
+              <ol>
+                <li><ion-input placeholder="Enter input here"></ion-input></li>
+                <li><ion-input placeholder="Enter input here"></ion-input></li>
+                <li><ion-input placeholder="Enter input here"></ion-input></li>
+              </ol>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <p>Kitchen</p>
+          </ion-col>
+          <ion-col>
+            <ion-list>
+              <ol>
+                <li><ion-input placeholder="Enter input here"></ion-input></li>
+                <li><ion-input placeholder="Enter input here"></ion-input></li>
+                <li><ion-input placeholder="Enter input here"></ion-input></li>
+              </ol>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card>
+
+  <div class="ion-text-center">
+    <ion-button>Submit</ion-button>
+    <ion-button [routerLink]="['/attach-picture']">Attach Picture</ion-button>
+  </div>
+</ion-content>

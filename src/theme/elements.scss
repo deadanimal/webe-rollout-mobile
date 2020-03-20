@@ -1,0 +1,24 @@
+.line-input {
+    margin-bottom: 10px !important;
+    ion-item {
+        margin-bottom: 10px !important;
+        --border-color: transparent!important;
+        --highlight-height: 0;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        &.item-has-focus {
+            border: 1px solid var(--ion-color-primary);
+        }
+        ion-label {
+            color: #807e7e!important;
+            font-weight: 300;
+            font-size: 1rem!important;
+        }
+    }
+}
+
+.air-selangor-toolbar{
+    --background: #F25724;
+
+    --color: #1B4DA8;
+}

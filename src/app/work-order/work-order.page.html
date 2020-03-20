@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar class="air-selangor-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Work Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Work Order 333
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item class="nopaddingstart">
+          <ion-label position="stacked">Vendor Name</ion-label>
+          <ion-input readonly value="Pipeline"></ion-input>
+        </ion-item>
+
+        <ion-item class="nopaddingstart">
+          <ion-label position="stacked">Location</ion-label>
+          <ion-textarea readonly rows="2" value="Menara TM, Bangsar"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="ion-text-center">
+    <h3 style="color: black; font-weight: bold;">Checklist</h3>
+  </div>
+
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card color="danger">
+            <ion-card-content>
+              <div class="ion-text-justify">
+                Punchlist
+              </div>
+            </ion-card-content>
+            <ion-item lines="none">
+              <ion-icon name="alert-circle" slot="start" size="large" color="danger"></ion-icon>
+              <ion-icon slot="end" size="large" name="create" [routerLink]="['/punchlist']"></ion-icon>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card color="success">
+            <ion-card-content>
+              <div class="ion-text-justify">
+                Acceptance Test Procedure
+              </div>
+            </ion-card-content>
+            <ion-item lines="none">
+              <ion-icon name="checkbox" slot="start" size="large" color="success"></ion-icon>
+              <ion-icon slot="end" size="large" name="eye" [routerLink]="['/acceptance-test-procedure']"></ion-icon>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card color="success">
+            <ion-card-content>
+              <div class="ion-text-justify">
+                Self Assesment
+              </div>
+            </ion-card-content>
+            <ion-item lines="none">
+              <ion-icon name="checkbox" slot="start" size="large" color="success"></ion-icon>
+              <ion-icon slot="end" size="large" name="eye" [routerLink]="['/self-assesment']"></ion-icon>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
